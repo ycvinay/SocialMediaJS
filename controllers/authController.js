@@ -17,7 +17,7 @@ exports.register = async (req, res) => {
         if (existing_user_email.length > 0) {
             return res.status(409).json({message: "Email already registered" });
         }
-
+// Added comment
         const [existing_username] = await db.query("SELECT id FROM users WHERE username = ? ", [username]);
 
         if (existing_username.length > 0) {
