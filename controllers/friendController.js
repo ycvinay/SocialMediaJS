@@ -147,7 +147,7 @@ exports.getFriendRequests = async (req, res) => {
             [userId]
         );
 
-        res.status(200).json({ requests });
+        res.status(200).json(requests);
     } catch(err) {
         console.error("Get friend requests error:", err);
         res.status(500).json({ message: "Server error" });
@@ -169,7 +169,7 @@ exports.getFriends = async (req, res) => {
         );
         
 
-        res.status(200).json({ friends });
+        res.status(200).json(friends);
     } catch (err) {
         console.error("Get friends error:", err);
         res.status(500).json({ message: "Server error" });

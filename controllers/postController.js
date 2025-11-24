@@ -362,7 +362,7 @@ exports.getComments = async (req, res) => {
              WHERE c.post_id = ? ORDER BY c.created_at DESC`,
             [postId]
         );
-        res.status(200).json({ comments });
+        res.status(200).json(comments);
     } catch (err) {
         console.error("Fetch comments error:", err);
         res.status(500).json({ message: "Server error" });
